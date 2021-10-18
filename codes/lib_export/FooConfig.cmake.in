@@ -1,0 +1,15 @@
+set ( PackageName @PackageName@ )
+set ( LIB_NAME @LIB_NAME@ )
+set ( ${PackageName}_VERSION ${PACKAGE_VERSION} )
+message ( STATUS "PackageName = ${PackageName}" )
+@PACKAGE_INIT@
+
+include ( ${CMAKE_CURRENT_LIST_DIR}/${PackageName}Targets.cmake )
+
+set_and_check ( ${PackageName}_INCLUDE_DIR "@PACKAGE_INCLUDE_INSTALL_DIR@" )
+
+set ( ${PackageName}_LIBRARIES )
+
+list ( APPEND ${PackageName}_LIBRARIES FooSpace::${LIB_NAME} )
+
+check_required_components(${PackageName})
