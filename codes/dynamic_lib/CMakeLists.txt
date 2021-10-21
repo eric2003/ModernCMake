@@ -6,17 +6,20 @@ set ( PackageName "Foo" )
 set ( INCLUDE_INSTALL_DIR include )
 set ( LIB_INSTALL_DIR lib  )
 set ( LIB_NAME "foolib" )
-
-if ( CMAKE_SYSTEM_NAME MATCHES "Linux" )
-	set ( LIB_NAME_STATIC "foolib" )
-elseif ( CMAKE_SYSTEM_NAME MATCHES "Windows" )
-	set ( LIB_NAME_STATIC "foolib_static" )
-endif()
+set ( LIB_NAME_STATIC "foolib_static" )
 
 add_library ( ${LIB_NAME_STATIC}
 	STATIC
 		${CMAKE_CURRENT_SOURCE_DIR}/src/foo.cpp
 )
+
+if ( CMAKE_SYSTEM_NAME MATCHES "Linux" )
+	set ( LIB_NAME_OUT ${LIB_NAME} )
+elseif ( CMAKE_SYSTEM_NAME MATCHES "Windows" )
+	set ( LIB_NAME_OUT ${LIB_NAME_STATIC} )
+endif()
+
+set_target_properties ( ${LIB_NAME_STATIC} PROPERTIES OUTPUT_NAME ${LIB_NAME_OUT} )
 
 target_include_directories ( ${LIB_NAME_STATIC} 
 	PRIVATE
