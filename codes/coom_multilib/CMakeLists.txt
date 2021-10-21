@@ -17,7 +17,6 @@ if ( OpenACC_CXX_FOUND )
 	list ( APPEND PRJ_COMPILE_DEF ENABLE_OPENACC )
 	message ( STATUS "ENV{NVCC_COMPILER}  = $ENV{NVCC_COMPILER}" )
 	if ( $ENV{NVCC_COMPILER} MATCHES "NVCC_COMPILER" )
-		#set ( OpenACC_CXX_FLAGS "${OpenACC_CXX_FLAGS} -fast -acc -Minfo=accel -gpu=cc60,cc70,cc75,cc80" )	
 		set( ACC_FLAG "-fast -Minfo=accel -gpu=cc60,cc70,cc75,cc80" )
 	else()
 		set( ACC_FLAG "-Ofast" )
@@ -39,11 +38,7 @@ if ( OpenMP_FOUND )
 	list ( APPEND PRJ_STATIC_LIBS ${OpenMP_CXX_LIBRARIES} )
 endif ()
 
-#set ( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS} -fast -acc -Minfo=accel -gpu=cc60,cc70,cc75,cc80" )
-
 set ( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS} ${OpenACC_CXX_FLAGS}" )
-
-#message ( STATUS "CMAKE_SYSTEM_NAME    = ${CMAKE_SYSTEM_NAME}" )
 
 find_package ( MPI )
 
@@ -58,9 +53,10 @@ message ( STATUS "MPI_LIBRARIES  = ${MPI_LIBRARIES}" )
 if ( MPI_C_FOUND )
 	list ( APPEND PRJ_LIBRARIES ${MPI_LIBRARIES} )
 	list ( APPEND PRJ_STATIC_LIBS ${MPI_LIBRARIES} )
+	
+	list ( APPEND PRJ_INCLUDE_DIRS MPI_CXX_INCLUDE_DIRS )
 endif ()
 
-#find_package ( CUDAToolkit )
 if ( CUDAToolkit_FOUND )
 	list ( APPEND PRJ_COMPILE_DEF ENABLE_CUDA )
 	enable_language( CUDA )
@@ -98,14 +94,12 @@ target_compile_definitions ( test
 
 target_include_directories ( test
 	PRIVATE
-		${MPI_CXX_INCLUDE_DIRS}
+		${PRJ_INCLUDE_DIRS}
 )
 
 target_link_libraries( test
     PRIVATE 
         ${PRJ_LIBRARIES}
-		#${OpenMP_CXX_LIBRARIES}
-		#${MPI_LIBRARIES}
 )
 
 add_executable( test_static
@@ -115,7 +109,7 @@ add_executable( test_static
 
 target_include_directories ( test_static
 	PRIVATE
-		${MPI_CXX_INCLUDE_DIRS}
+		${PRJ_INCLUDE_DIRS}
 )
 
 target_compile_definitions ( test_static
@@ -126,6 +120,4 @@ target_compile_definitions ( test_static
 target_link_libraries( test_static
     PRIVATE 
         ${PRJ_STATIC_LIBS}
-		#${OpenMP_CXX_LIBRARIES}
-		#${MPI_LIBRARIES}
 )
