@@ -1,0 +1,46 @@
+#include <iostream>
+#include <thread>
+#include <string>
+#include <future>
+
+int compute( int nIters )
+{
+    for ( int iter = 0; iter < nIters; ++ iter )
+    {
+        std::cout << " iter = " << iter + 1 << " nIters = " << nIters << std::endl;		
+        std::this_thread::sleep_for( std::chrono::milliseconds(500) );
+    }
+    std::cout << "The computation is finished! "  << std::endl;
+    return 123;
+}
+
+void gui( double cfl )
+{
+    std::cout << "The CFL number is " << cfl << std::endl;
+}
+
+int main()
+{
+    std::future<int> fret = std::async([&] { return compute(10); } );
+    std::this_thread::sleep_for( std::chrono::milliseconds(1500) );
+    gui( 1.2 );
+
+    while ( true )
+    {
+        std::cout << "Waiting for computation complete..." << std::endl;
+        auto stat = fret.wait_for(std::chrono::milliseconds(1000));
+        if ( stat == std::future_status::ready )
+        {
+            std::cout << "fret is ready!" << std::endl;
+            break;
+        }
+        else
+        {
+            std::cout << "fret is not ready!" << std::endl;
+        }
+    }
+    std::cout << "wait finished!" << std::endl;
+    int ret = fret.get();
+    std::cout << "computation result: " << ret << std::endl;
+    return 0;
+}

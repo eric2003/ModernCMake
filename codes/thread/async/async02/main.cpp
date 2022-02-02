@@ -1,8 +1,9 @@
 #include <iostream>
 #include <thread>
 #include <string>
+#include <future>
 
-void compute( int nIters )
+int compute( int nIters )
 {
     for ( int iter = 0; iter < nIters; ++ iter )
     {
@@ -10,6 +11,7 @@ void compute( int nIters )
         std::this_thread::sleep_for( std::chrono::milliseconds(500) );
     }
     std::cout << "The computation is finished! "  << std::endl;
+    return 123;
 }
 
 void gui( double cfl )
@@ -17,19 +19,14 @@ void gui( double cfl )
     std::cout << "The CFL number is " << cfl << std::endl;
 }
 
-std::thread th;
-
-void wrapfun()
-{
-    std::thread t1( [&] { compute(10); } );
-    th = std::move( t1 );
-}
-
 int main()
 {
-    wrapfun();
+    std::future<int> fret = std::async([&] { return compute(10); } );
     std::this_thread::sleep_for( std::chrono::milliseconds(1500) );
     gui( 1.2 );
-    th.join();
+    fret.wait();
+    std::cout << "wait finished!" << std::endl;
+    int ret = fret.get();
+    std::cout << "computation result: " << ret << std::endl;
     return 0;
 }
