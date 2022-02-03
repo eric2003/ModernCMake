@@ -1,7 +1,7 @@
 #include <iostream>
 #include <thread>
 #include <string>
-#include <vector>
+#include <future>
 
 void compute( int nIters )
 {
@@ -18,22 +18,16 @@ void gui( double cfl )
     std::cout << "The CFL number is " << cfl << std::endl;
 }
 
-std::vector<std::thread> th_pool;
-
-void wrapfun()
-{
-    std::thread th( [&] { compute(10); } );
-    th_pool.push_back( std::move(th) );
-}
-
 int main()
 {
-    wrapfun();
+    std::shared_future<void> fret = std::async([&] {
+        compute(10); 
+    });
+    auto fret2 = fret;
+    auto fret3 = fret;
     std::this_thread::sleep_for( std::chrono::milliseconds(1500) );
     gui( 1.2 );
-    for (auto &th: th_pool)
-    {
-        th.join();
-    }
+    fret3.wait();
+    std::cout << "computation finished " << std::endl;
     return 0;
 }
