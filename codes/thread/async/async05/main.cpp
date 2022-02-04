@@ -7,7 +7,7 @@ int compute( int nIters )
 {
     for ( int iter = 0; iter < nIters; ++ iter )
     {
-        std::cout << " iter = " << iter + 1 << " nIters = " << nIters << std::endl;		
+        std::cout << " iter = " << iter + 1 << " nIters = " << nIters << std::endl;
         std::this_thread::sleep_for( std::chrono::milliseconds(500) );
     }
     std::cout << "The computation is finished! "  << std::endl;
