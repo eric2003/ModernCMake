@@ -6,7 +6,7 @@
 
 int main( int argc, char **argv )
 {
-    const int nSize = 100;
+    const int nSize = 10;
     std::vector<int> myarray;
     std::mutex mtx;
     std::thread th1([&] {
