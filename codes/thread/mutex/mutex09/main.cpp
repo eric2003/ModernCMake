@@ -3,21 +3,21 @@
 #include <thread>         // std::thread
 #include <mutex>          // std::timed_mutex
 
-std::timed_mutex mtx;
+std::mutex mtx;
 
-void my_try_lock_function ( int i ) {
-    if ( mtx.try_lock_for( std::chrono::milliseconds(500) ) )
+void my_try_lock_function ( int i )
+{
+    std::unique_lock grd(mtx, std::try_to_lock);
+    if ( grd.owns_lock() )
     {
-        std::cout << "try_lock_for thread " << i << " succeed! " << std::endl;
+        std::cout << "owns_lock thread " << i << " succeed! " << std::endl;
     }
     else
     {
-        std::cout << "try_lock_for thread " << i << " failed! " << std::endl;
+        std::cout << "owns_lock thread " << i << " failed! " << std::endl;
     }
     std::this_thread::sleep_for(std::chrono::milliseconds(600));
-    mtx.unlock();
 }
-
 
 int main( int argc, char **argv )
 {
@@ -31,3 +31,4 @@ int main( int argc, char **argv )
 
     return 0;
 }
+
