@@ -84,6 +84,30 @@ int main( int argc, char **argv )
         tbb::tick_count t1 = tbb::tick_count::now();
         std::cout << "time elapsed: " << ( t1 - t0 ).seconds() * 1000 << " ms" << std::endl;
     }
+    {
+        std::mutex mtx;
+        tbb::tick_count t0 = tbb::tick_count::now();
+        std::vector<float> f;
+        tbb::parallel_for(tbb::blocked_range<size_t>(0, n),
+        [&] ( tbb::blocked_range<size_t> r ) {
+            std::vector<float> local_f;
+            local_f.reserve( r.size() );
+            for ( size_t i = r.begin(); i < r.end(); ++ i )
+            {
+                float val = std::sin(i);
+                if ( val > 0 )
+                {
+                    local_f.push_back(val);
+                }
+            }
+            std::lock_guard lck(mtx);
+            std::copy( local_f.begin(), local_f.end(), std::back_inserter(f) );
+        });
+        std::cout << "f.size() = " << f.size() << std::endl;
+        tbb::tick_count t1 = tbb::tick_count::now();
+        std::cout << "time elapsed: " << ( t1 - t0 ).seconds() * 1000 << " ms" << std::endl;
+    }
+
     return 0;
 }
 
