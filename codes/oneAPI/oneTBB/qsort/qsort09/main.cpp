@@ -127,6 +127,23 @@ void quick_sort2( T * data, size_t size )
     });
 }
 
+template <class T>
+T quick_reduce( T *data, size_t size )
+{
+    if ( size < ( 1 << 16 ) )
+    {
+        return std::reduce( data, data + size );
+    }
+    T sum1, sum2;
+    size_t mid = size / 2;
+    tbb::parallel_invoke([&] {
+        sum1 = quick_reduce( data, mid );
+    }, [&] {
+        sum2 = quick_reduce( data + mid, size - mid );
+    });
+    return sum1 + sum2;
+}
+
 int main( int argc, char **argv )
 {
     size_t n = 1 << 24;
