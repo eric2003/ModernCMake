@@ -1,26 +1,15 @@
 #include <iostream>
 
-#ifdef USE_MSVC
-    #define FUNCTION_DETAIL __FUNCSIG__
-#else
-    #define FUNCTION_DETAIL __PRETTY_FUNCTION__
-#endif
-
-void print()
+template<typename...T>
+void f( T ... args )
 {
-    std::cout << FUNCTION_DETAIL << ": " << std::endl;
+	std::cout << sizeof ... ( args ) << std::endl;
 }
-
-template<typename T, typename... Args>
-void print(T t, Args... args)
-{
-    std::cout << FUNCTION_DETAIL << ": " << t << std::endl;
-    print(args...);
-}
-
 
 int main()
 {
-    print( 1, 2.5, 'a', 2022, "hello!");
-    return 0;
+	f();
+	f(1);
+	f(1, 2.3);
+	return 0;
 }
