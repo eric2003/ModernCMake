@@ -2,7 +2,7 @@
 #include <typeinfo>
 
 template<typename T> 
-void f(const T& param) 
+void funinfo(const T& param) 
 {
 #if defined(__GNUC__) //GNU 
     std::cout << __PRETTY_FUNCTION__ << std::endl; // Clang 
