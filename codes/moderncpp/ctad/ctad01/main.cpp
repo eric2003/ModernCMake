@@ -11,7 +11,7 @@ class Add{
         T result() const {return first + second;}
 };
 
-//Add(const char*, const char*) -> Add<std::string>;
+Add(const char*, const char*) -> Add<std::string>;
 
 int main( int argc, char **argv )
 {
