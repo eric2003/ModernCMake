@@ -28,16 +28,34 @@ int main(int argc, char** argv)
     //benchmark::Initialize(&argc, argv);
     //benchmark::RunSpecifiedBenchmarks();
     //benchmark::Shutdown();
+    size_t n = 1<<27;
+    std::vector<float> a(n);
 
     {
         typedef std::chrono::high_resolution_clock Clock;
-        auto then = Clock::now();
-        auto now = Clock::now();
+        auto t1 = Clock::now();
+        // fill a with sin(i)
+        for ( size_t i = 0; i < a.size(); ++ i )
+        {
+            a[i] = std::sin(i);
+        }
 
-        std::cout << "virtual time taken: "
-             << std::chrono::duration_cast<std::chrono::nanoseconds>(now - then).count()
+        auto t2 = Clock::now();
+
+        std::cout << "time taken: "
+             << std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1).count()
              << " nanoseconds" << std::endl;
+        std::cout << "time taken: "
+             << std::chrono::duration_cast<std::chrono::seconds>(t2 - t1).count()
+             << " seconds" << std::endl;
+        std::cout << "time taken: "
+             << std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count()
+             << " milliseconds" << std::endl;
+        std::cout << "time taken: "
+             << std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1).count()
+             << " microseconds" << std::endl;
     }
+    /*
     {
         auto t1 = std::chrono::high_resolution_clock::now();
         auto t2 = std::chrono::high_resolution_clock::now();
@@ -75,7 +93,7 @@ int main(int argc, char** argv)
    //#define TOCK(x) std::cout << #x ": " << std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::steady_clock::now() - bench_##x).count() << "s" << std::endl;
 
         
-        return 0;
-    }	
+    }
+	*/
     return 0;
 }
