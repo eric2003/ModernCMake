@@ -1,5 +1,6 @@
 #include <benchmark/benchmark.h>
 #include <tbb/parallel_for.h>
+#include <tbb/parallel_reduce.h>
 #include <vector>
 #include <iostream>
 #include <chrono>
@@ -51,9 +52,23 @@ int main(int argc, char** argv)
         });
         auto t1 = Clock::now();
         std::chrono::nanoseconds dt = t1 - t0;
-        //std::chrono::nanoseconds ns = std::chrono::duration_cast<std::chrono::nanoseconds>(dt).count();
         auto ns = std::chrono::duration_cast<std::chrono::nanoseconds>(dt).count();
-        std::cout << "time elapsed: " << ns << " nanoseconds" << std::endl;
+        std::chrono::nanoseconds::rep ns1 = std::chrono::duration_cast<std::chrono::nanoseconds>(dt).count();
+        std::cout << "tbb::parallel_for time elapsed: " << ns << " nanoseconds" << std::endl;
+        t0 = Clock::now();
+        float res = tbb::parallel_reduce(tbb::blocked_range<size_t>(0, n), (float)0,
+        [&] (tbb::blocked_range<size_t> r, float local_res) {
+            for ( size_t i = r.begin(); i < r.end(); ++ i) {
+                local_res += vec[i];
+            }
+            return local_res;
+        }, [] (float x, float y) {
+            return x + y;
+        });
+        t1 = Clock::now();
+        dt = t1 - t0;
+        ns = std::chrono::duration_cast<std::chrono::nanoseconds>(dt).count();
+        std::cout << "tbb::parallel_reduce time elapsed: " << ns << " nanoseconds" << std::endl;
     }
     {
         size_t n = 1<<27;
