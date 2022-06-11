@@ -1,0 +1,23 @@
+cmake_minimum_required ( VERSION 3.20 )
+
+project( testprj )
+
+add_library( ${PROJECT_NAME} STATIC 
+    hello.cpp
+)
+
+add_custom_target ( print 
+    ${CMAKE_COMMAND} -E 
+    echo 
+    TARGET_FILE:${PROJECT_NAME} = $<TARGET_FILE:${PROJECT_NAME}> &
+    echo 
+    TARGET_FILE_BASE_NAME:${PROJECT_NAME} = $<TARGET_FILE_BASE_NAME:${PROJECT_NAME}> &
+    echo 
+    TARGET_FILE_PREFIX:${PROJECT_NAME} = $<TARGET_FILE_PREFIX:${PROJECT_NAME}> &
+    echo 
+    TARGET_FILE_SUFFIX:${PROJECT_NAME} = $<TARGET_FILE_SUFFIX:${PROJECT_NAME}> &
+    echo 
+    TARGET_FILE_NAME:${PROJECT_NAME} = $<TARGET_FILE_NAME:${PROJECT_NAME}> &
+    echo 
+    TARGET_LINKER_FILE:${PROJECT_NAME} = $<TARGET_LINKER_FILE:${PROJECT_NAME}>
+)

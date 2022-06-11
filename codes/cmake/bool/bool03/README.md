@@ -1,0 +1,1 @@
+cmake -DSHARED=TRUE -DTTT="test" ..
