@@ -30,9 +30,7 @@ target_compile_features ( ${PROJECT_NAME}
         ${PRJ_COMPILE_FEATURES}
 )
 
-get_property( dirs DIRECTORY ${CMAKE_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES )
-
-message( STATUS "dirs= ${dirs}" )
-foreach(dir ${dirs})
-    message( STATUS "dir='${dir}'" )
+get_target_property(include_dirs ${PROJECT_NAME} INCLUDE_DIRECTORIES)
+foreach(dir ${include_dirs})
+    message( STATUS "include_dir =${dir}" )
 endforeach()
