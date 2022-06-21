@@ -1,0 +1,10 @@
+cmake_minimum_required ( VERSION 3.20 )
+
+project ( testprj )
+
+add_library(mylib INTERFACE)
+set_property(
+    TARGET mylib
+    PROPERTY INTERFACE_POSITION_INDEPENDENT_CODE ON
+)
+#message ( STATUS "my_prop_value=${my_prop_value}" )
