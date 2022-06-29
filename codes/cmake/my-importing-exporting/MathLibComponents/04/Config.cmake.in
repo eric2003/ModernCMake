@@ -1,0 +1,20 @@
+@PACKAGE_INIT@
+
+message( STATUS "CMAKE_CURRENT_LIST_DIR = ${CMAKE_CURRENT_LIST_DIR}" )
+
+include("${CMAKE_CURRENT_LIST_DIR}/MathLibTargets.cmake")
+
+check_required_components(MathFunctions)
+
+set(_MathLib_supported_components Addition SquareRoot)
+
+message( STATUS "MathLib_FIND_COMPONENTS = ${MathLib_FIND_COMPONENTS}" )
+
+foreach(_comp ${MathLib_FIND_COMPONENTS})
+  message( STATUS "_comp = ${_comp}" )
+  if (NOT _comp IN_LIST _MathLib_supported_components)
+    set(MathLib_FOUND False)
+    set(MathLib_NOT_FOUND_MESSAGE "Unsupported component: ${_comp}")
+  endif()
+  include("${CMAKE_CURRENT_LIST_DIR}/MathLib${_comp}Targets.cmake")
+endforeach()
