@@ -1,0 +1,115 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/pybind11-x64-windows-2.9.2-0e1713c8-69d2-46da-9114-14e171dc0214",
+  "name": "pybind11:x64-windows@2.9.2 ebfdae884c65f93be6ec498db6a0294bbe7a5ccb22de4c074220b4142f6b4d51",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-b0f08e40f8e8752dd0b260138ee078bd9599559c"
+    ],
+    "created": "2022-07-01T01:59:47Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "pybind11",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "2.9.2",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/pybind11",
+      "homepage": "https://github.com/pybind/pybind11",
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "pybind11 is a lightweight header-only library that exposes C++ types in Python and vice versa, mainly to create Python bindings of existing C++ code",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "pybind11:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "ebfdae884c65f93be6ec498db6a0294bbe7a5ccb22de4c074220b4142f6b4d51",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-1",
+      "name": "pybind/pybind11",
+      "downloadLocation": "git+https://github.com/pybind/pybind11@v2.9.2",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "c6c18e5f59873adb3692640ade26472abd257607e7bb9fd48cfd1949878811e83d6ac6eb8c8dd926622d52ca4f13e5e6a58e0abaaaa1fa814ee831ea2b515272"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "66f4c11e9d2ba3bfd102ce14e8fcb992770a1642e541c0bf1ea50a95e4b86779"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fb4673982281ae4bc8f435942a671f98938b002a48457de7fea487b37a7d1b79"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

@@ -12,10 +12,6 @@ add_executable ( ${PROJECT_NAME}
     main.cpp
 )
 
-list ( APPEND PRJ_LIBRARIES lib1 )
-list ( APPEND PRJ_LIBRARIES lib2 )
-list ( APPEND PRJ_LIBRARIES lib3 )
-
 target_include_directories ( ${PROJECT_NAME}
     PRIVATE 
         ${PRJ_INCLUDE_DIRS}
@@ -23,7 +19,8 @@ target_include_directories ( ${PROJECT_NAME}
 
 target_link_libraries( ${PROJECT_NAME} 
     PRIVATE 
-        ${PRJ_LIBRARIES}
+    debug MathLib_d.lib 
+    optimized MathLib.lib
 )
 
 target_compile_features ( ${PROJECT_NAME} 

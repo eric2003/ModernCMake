@@ -6,15 +6,14 @@ set ( PRJ_INCLUDE_DIRS )
 set ( PRJ_COMPILE_FEATURES )
 set ( PRJ_LIBRARIES )
 
+message( STATUS "CMAKE_CURRENT_SOURCE_DIR = ${CMAKE_CURRENT_SOURCE_DIR}" )
+message( STATUS "CMAKE_CURRENT_BINARY_DIR = ${CMAKE_CURRENT_BINARY_DIR}" )
+
 list ( APPEND PRJ_COMPILE_FEATURES cxx_std_20 )
 
 add_executable ( ${PROJECT_NAME}
     main.cpp
 )
-
-list ( APPEND PRJ_LIBRARIES lib1 )
-list ( APPEND PRJ_LIBRARIES lib2 )
-list ( APPEND PRJ_LIBRARIES lib3 )
 
 target_include_directories ( ${PROJECT_NAME}
     PRIVATE 
@@ -22,8 +21,9 @@ target_include_directories ( ${PROJECT_NAME}
 )
 
 target_link_libraries( ${PROJECT_NAME} 
-    PRIVATE 
-        ${PRJ_LIBRARIES}
+    PUBLIC 
+    debug ${CMAKE_CURRENT_SOURCE_DIR}/MathLib_d.lib 
+    optimized ${CMAKE_CURRENT_SOURCE_DIR}/MathLib.lib
 )
 
 target_compile_features ( ${PROJECT_NAME} 
@@ -40,4 +40,21 @@ include(CMakePrintHelpers)
 cmake_print_properties(
   TARGETS ${PROJECT_NAME}
   PROPERTIES LINK_LIBRARIES
+)
+
+include(CMakePrintHelpers)
+cmake_print_properties(
+  TARGETS ${PROJECT_NAME}
+  PROPERTIES INTERFACE_LINK_LIBRARIES
+)
+
+add_custom_target ( print 
+    COMMAND
+    ${CMAKE_COMMAND} -E 
+    echo
+    PLATFORM_ID = $<PLATFORM_ID> &
+    echo
+    CONFIG = $<CONFIG> &
+    echo
+    prj_libs =  ${prj_libs}
 )
