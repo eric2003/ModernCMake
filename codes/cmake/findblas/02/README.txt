@@ -1,0 +1,1 @@
+cmake .. -D BLA_VENDOR:STRING=OpenBLAS
