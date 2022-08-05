@@ -4,5 +4,5 @@ project ( testprj )
 
 find_package ( CUDAToolkit )
 
-get_property(_variableNames DIRECTORY ${dir} PROPERTY VARIABLES)
+get_property(_variableNames DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VARIABLES)
 message( STATUS "_variableNames=${_variableNames}" )
