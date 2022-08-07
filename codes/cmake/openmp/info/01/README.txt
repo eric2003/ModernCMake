@@ -1,0 +1,61 @@
+PS D:\work\modern_cmake_work\ModernCMake\codes\cmake\openmp\info\01\build> cmake ..
+-- Building for: Visual Studio 17 2022
+-- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.22000.
+-- The C compiler identification is MSVC 19.32.31329.0
+-- The CXX compiler identification is MSVC 19.32.31329.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenMP_C: -openmp (found version "2.0")
+-- Found OpenMP_CXX: -openmp (found version "2.0")
+-- Found OpenMP: TRUE (found version "2.0")
+-- FIND_PACKAGE_MESSAGE_DETAILS_OpenMP=[TRUE][TRUE][c ][v2.0()]
+-- FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C=[-openmp][v2.0()]
+-- FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX=[-openmp][v2.0()]
+-- OPENMP_CXX_FOUND=TRUE
+-- OPENMP_C_FOUND=TRUE
+-- OPENMP_FOUND=TRUE
+-- OpenMP_COMPILE_RESULT_CXX_openmp=TRUE
+-- OpenMP_COMPILE_RESULT_C_openmp=TRUE
+-- OpenMP_CXX_FLAGS=-openmp
+-- OpenMP_CXX_FLAGS_WORK=-openmp
+-- OpenMP_CXX_FOUND=TRUE
+-- OpenMP_CXX_INCLUDE_DIRS=
+-- OpenMP_CXX_LIBRARIES=
+-- OpenMP_CXX_LIB_NAMES=
+-- OpenMP_CXX_LIB_NAMES_WORK=
+-- OpenMP_CXX_SPEC_DATE=200203
+-- OpenMP_CXX_SPEC_DATE_INTERNAL=200203
+-- OpenMP_CXX_VERSION=2.0
+-- OpenMP_CXX_VERSION_MAJOR=2
+-- OpenMP_CXX_VERSION_MINOR=0
+-- OpenMP_C_FLAGS=-openmp
+-- OpenMP_C_FLAGS_WORK=-openmp
+-- OpenMP_C_FOUND=TRUE
+-- OpenMP_C_INCLUDE_DIRS=
+-- OpenMP_C_LIBRARIES=
+-- OpenMP_C_LIB_NAMES=
+-- OpenMP_C_LIB_NAMES_WORK=
+-- OpenMP_C_SPEC_DATE=200203
+-- OpenMP_C_SPEC_DATE_INTERNAL=200203
+-- OpenMP_C_VERSION=2.0
+-- OpenMP_C_VERSION_MAJOR=2
+-- OpenMP_C_VERSION_MINOR=0
+-- OpenMP_FINDLIST=C;CXX;Fortran
+-- OpenMP_FOUND=TRUE
+-- OpenMP_SPECTEST_CXX_=TRUE
+-- OpenMP_SPECTEST_C_=TRUE
+-- _OPENMP_CXX_REQUIRED_VARS=OpenMP_CXX_FLAGS
+-- _OPENMP_C_REQUIRED_VARS=OpenMP_C_FLAGS
+-- _OpenMP_MIN_VERSION=OpenMP_C_VERSION
+-- _OpenMP_REQ_VARS=OpenMP_C_FOUND;OpenMP_CXX_FOUND
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/work/modern_cmake_work/ModernCMake/codes/cmake/openmp/info/01/build
