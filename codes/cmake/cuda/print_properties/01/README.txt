@@ -1,0 +1,27 @@
+PS D:\work\modern_cmake_work\ModernCMake\codes\cmake\cuda\print_properties\01\build> cmake ..
+-- Building for: Visual Studio 17 2022
+-- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.22000.
+-- The C compiler identification is MSVC 19.32.31329.0
+-- The CXX compiler identification is MSVC 19.32.31329.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- PROPERTY : CMAKE_CUDA_KNOWN_FEATURES
+-- PROPERTY : CUDA_ARCHITECTURES
+-- PROPERTY : CUDA_EXTENSIONS
+-- PROPERTY : CUDA_PTX_COMPILATION
+-- PROPERTY : CUDA_RESOLVE_DEVICE_SYMBOLS
+-- PROPERTY : CUDA_RUNTIME_LIBRARY
+-- PROPERTY : CUDA_SEPARABLE_COMPILATION
+-- PROPERTY : CUDA_STANDARD
+-- PROPERTY : CUDA_STANDARD_REQUIRED
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/work/modern_cmake_work/ModernCMake/codes/cmake/cuda/print_properties/01/build
