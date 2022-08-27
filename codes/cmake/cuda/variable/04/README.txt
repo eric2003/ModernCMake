@@ -1,0 +1,90 @@
+PS D:\work\modern_cmake_work\ModernCMake\codes\cmake\cuda\variable\03\build> cmake ..
+-- Building for: Visual Studio 17 2022
+-- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.22000.
+-- The C compiler identification is MSVC 19.32.31329.0
+-- The CXX compiler identification is MSVC 19.32.31329.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found CUDAToolkit: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/include (found version "11.6.124")
+-- CMAKE_VS_PLATFORM_TOOLSET_CUDA
+-- CUDATOOLKIT_FOUND
+-- CUDAToolkit_BIN_DIR
+-- CUDAToolkit_CUPTI_INCLUDE_DIR
+-- CUDAToolkit_FOUND
+-- CUDAToolkit_INCLUDE_DIR
+-- CUDAToolkit_INCLUDE_DIRS
+-- CUDAToolkit_LIBRARY_DIR
+-- CUDAToolkit_NVCC_EXECUTABLE
+-- CUDAToolkit_TARGET_DIR
+-- CUDAToolkit_VERSION
+-- CUDAToolkit_VERSION_MAJOR
+-- CUDAToolkit_VERSION_MINOR
+-- CUDAToolkit_VERSION_PATCH
+-- CUDA_CUDART
+-- CUDA_OpenCL_LIBRARY
+-- CUDA_cublasLt_LIBRARY
+-- CUDA_cublasLt_static_LIBRARY
+-- CUDA_cublas_LIBRARY
+-- CUDA_cublas_static_LIBRARY
+-- CUDA_cuda_driver_LIBRARY
+-- CUDA_cudart_LIBRARY
+-- CUDA_cudart_static_LIBRARY
+-- CUDA_cufft_LIBRARY
+-- CUDA_cufft_static_LIBRARY
+-- CUDA_cufft_static_nocallback_LIBRARY
+-- CUDA_cufftw_LIBRARY
+-- CUDA_cufftw_static_LIBRARY
+-- CUDA_culibos_LIBRARY
+-- CUDA_cupti_LIBRARY
+-- CUDA_cupti_static_LIBRARY
+-- CUDA_curand_LIBRARY
+-- CUDA_curand_static_LIBRARY
+-- CUDA_cusolver_LIBRARY
+-- CUDA_cusolver_lapack_static_LIBRARY
+-- CUDA_cusolver_metis_static_LIBRARY
+-- CUDA_cusolver_static_LIBRARY
+-- CUDA_cusparse_LIBRARY
+-- CUDA_cusparse_static_LIBRARY
+-- CUDA_nppc_LIBRARY
+-- CUDA_nppc_static_LIBRARY
+-- CUDA_nppial_LIBRARY
+-- CUDA_nppial_static_LIBRARY
+-- CUDA_nppicc_LIBRARY
+-- CUDA_nppicc_static_LIBRARY
+-- CUDA_nppicom_LIBRARY
+-- CUDA_nppicom_static_LIBRARY
+-- CUDA_nppidei_LIBRARY
+-- CUDA_nppidei_static_LIBRARY
+-- CUDA_nppif_LIBRARY
+-- CUDA_nppif_static_LIBRARY
+-- CUDA_nppig_LIBRARY
+-- CUDA_nppig_static_LIBRARY
+-- CUDA_nppim_LIBRARY
+-- CUDA_nppim_static_LIBRARY
+-- CUDA_nppist_LIBRARY
+-- CUDA_nppist_static_LIBRARY
+-- CUDA_nppisu_LIBRARY
+-- CUDA_nppisu_static_LIBRARY
+-- CUDA_nppitc_LIBRARY
+-- CUDA_nppitc_static_LIBRARY
+-- CUDA_npps_LIBRARY
+-- CUDA_npps_static_LIBRARY
+-- CUDA_nvToolsExt_LIBRARY
+-- CUDA_nvgraph_LIBRARY
+-- CUDA_nvgraph_static_LIBRARY
+-- CUDA_nvjpeg_LIBRARY
+-- CUDA_nvjpeg_static_LIBRARY
+-- CUDA_nvml_LIBRARY
+-- CUDA_nvrtc_LIBRARY
+-- FIND_PACKAGE_MESSAGE_DETAILS_CUDAToolkit
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/work/modern_cmake_work/ModernCMake/codes/cmake/cuda/variable/03/build

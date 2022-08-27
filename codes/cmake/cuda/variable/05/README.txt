@@ -1,0 +1,172 @@
+-- CMAKE_CUDA_COMPILER_TOOLKIT_LIBRARY_ROOT=
+-- CMAKE_CUDA_COMPILER_TOOLKIT_ROOT=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6
+-- CMAKE_CUDA_COMPILER_TOOLKIT_VERSION=11.6.124
+-- CMAKE_CUDA_COMPILER_VERSION=11.6.124
+-- CMAKE_CUDA_COMPILER_VERSION_INTERNAL=
+-- CMAKE_CUDA_COMPILER_WORKS=TRUE
+-- CMAKE_CUDA_COMPILER_WRAPPER=
+-- CMAKE_CUDA_COMPILE_FEATURES=cuda_std_03;cuda_std_11;cuda_std_14;cuda_std_17
+-- CMAKE_CUDA_COMPILE_OBJECT=<CMAKE_CUDA_COMPILER> -forward-unknown-to-host-compiler <DEFINES> <INCLUDES> <FLAGS> -x cu <CUDA_COMPILE_MODE> <SOURCE> -o <OBJECT> -Xcompiler=-Fd<TARGET_COMPILE_PDB>,-FS
+-- CMAKE_CUDA_COMPILE_OPTIONS_MSVC_RUNTIME_LIBRARY_MultiThreaded=-Xcompiler=-MT
+-- CMAKE_CUDA_COMPILE_OPTIONS_MSVC_RUNTIME_LIBRARY_MultiThreadedDLL=-Xcompiler=-MD
+-- CMAKE_CUDA_COMPILE_OPTIONS_MSVC_RUNTIME_LIBRARY_MultiThreadedDebug=-Xcompiler=-MTd
+-- CMAKE_CUDA_COMPILE_OPTIONS_MSVC_RUNTIME_LIBRARY_MultiThreadedDebugDLL=-Xcompiler=-MDd
+-- CMAKE_CUDA_CREATE_SHARED_LIBRARY=<CMAKE_COMMAND> -E vs_link_dll --intdir=<OBJECT_DIR> --rc=<CMAKE_RC_COMPILER> --mt=<CMAKE_MT> --manifests <MANIFESTS> -- <CMAKE_LINKER> /nologo <OBJECTS>  /out:<TARGET> /implib:<TARGET_IMPLIB> /pdb:<TARGET_PDB> /dll /version:<TARGET_VERSION_MAJOR>.<TARGET_VERSION_MINOR> <LINK_FLAGS> <LINK_LIBRARIES>
+-- CMAKE_CUDA_CREATE_SHARED_MODULE=<CMAKE_COMMAND> -E vs_link_dll --intdir=<OBJECT_DIR> --rc=<CMAKE_RC_COMPILER> --mt=<CMAKE_MT> --manifests <MANIFESTS> -- <CMAKE_LINKER> /nologo <OBJECTS>  /out:<TARGET> /implib:<TARGET_IMPLIB> /pdb:<TARGET_PDB> /dll /version:<TARGET_VERSION_MAJOR>.<TARGET_VERSION_MINOR> <LINK_FLAGS> <LINK_LIBRARIES>
+-- CMAKE_CUDA_CREATE_STATIC_LIBRARY=<CMAKE_AR> /nologo <LINK_FLAGS> /out:<TARGET> <OBJECTS>
+-- CMAKE_CUDA_DEPFILE_FORMAT=gcc
+-- CMAKE_CUDA_DEVICE_COMPILER_WRAPPER_FLAG=-Xcompiler=
+-- CMAKE_CUDA_DEVICE_COMPILER_WRAPPER_FLAG_SEP=,
+-- CMAKE_CUDA_DEVICE_LINKER=
+-- CMAKE_CUDA_DEVICE_LINKER_WRAPPER_FLAG=-Xlinker=
+-- CMAKE_CUDA_DEVICE_LINKER_WRAPPER_FLAG_SEP=,
+-- CMAKE_CUDA_DEVICE_LINK_COMPILE=<CMAKE_CUDA_COMPILER> -forward-unknown-to-host-compiler <FLAGS> <LINK_FLAGS> -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__ -D__NV_EXTRA_INITIALIZATION="" -D__NV_EXTRA_FINALIZATION="" -DREGISTERLINKBINARYFILE=\"<REGISTER_FILE>\" -DFATBINFILE=\"<FATBINARY>\" -x cu -c "/bin/crt/link.stub" -o <OBJECT>
+-- CMAKE_CUDA_DEVICE_LINK_EXECUTABLE=<CMAKE_CUDA_COMPILER> -forward-unknown-to-host-compiler <LANGUAGE_COMPILE_FLAGS> <LINK_FLAGS> -Wno-deprecated-gpu-targets -shared -dlink <OBJECTS> -o <TARGET> <LINK_LIBRARIES> -Xcompiler=-Fd<TARGET_COMPILE_PDB>,-FS
+-- CMAKE_CUDA_DEVICE_LINK_LIBRARY=<CMAKE_CUDA_COMPILER> -forward-unknown-to-host-compiler <LANGUAGE_COMPILE_FLAGS> <LINK_FLAGS> -Wno-deprecated-gpu-targets -shared -dlink <OBJECTS> -o <TARGET> <LINK_LIBRARIES> -Xcompiler=-Fd<TARGET_COMPILE_PDB>,-FS
+-- CMAKE_CUDA_EXTENSIONS_COMPUTED_DEFAULT=OFF
+-- CMAKE_CUDA_EXTENSIONS_DEFAULT=OFF
+-- CMAKE_CUDA_FATBINARY=
+-- CMAKE_CUDA_FLAGS=-D_WINDOWS -Xcompiler=" /EHsc"
+-- CMAKE_CUDA_FLAGS_DEBUG=-Xcompiler="-Zi -Ob0 -Od /RTC1"
+-- CMAKE_CUDA_FLAGS_DEBUG_INIT= -Xcompiler="-Zi -Ob0 -Od /RTC1"
+-- CMAKE_CUDA_FLAGS_INIT=   -D_WINDOWS -Xcompiler=" /EHsc"
+-- CMAKE_CUDA_FLAGS_MINSIZEREL=-Xcompiler="-O1 -Ob1" -DNDEBUG
+-- CMAKE_CUDA_FLAGS_MINSIZEREL_INIT= -Xcompiler="-O1 -Ob1" -DNDEBUG
+-- CMAKE_CUDA_FLAGS_RELEASE=-Xcompiler="-O2 -Ob2" -DNDEBUG
+-- CMAKE_CUDA_FLAGS_RELEASE_INIT= -Xcompiler="-O2 -Ob2" -DNDEBUG
+-- CMAKE_CUDA_FLAGS_RELWITHDEBINFO=-Xcompiler="-Zi -O2 -Ob1" -DNDEBUG
+-- CMAKE_CUDA_FLAGS_RELWITHDEBINFO_INIT= -Xcompiler="-Zi -O2 -Ob1" -DNDEBUG
+-- CMAKE_CUDA_HOST_COMPILER=
+-- CMAKE_CUDA_HOST_COMPILER_ENV_VAR=CUDAHOSTCXX
+-- CMAKE_CUDA_HOST_IMPLICIT_LINK_DIRECTORIES=
+-- CMAKE_CUDA_HOST_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES=
+-- CMAKE_CUDA_HOST_IMPLICIT_LINK_LIBRARIES=
+-- CMAKE_CUDA_HOST_LINK_LAUNCHER=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx64/x64/link.exe
+-- CMAKE_CUDA_IMPLICIT_INCLUDE_DIRECTORIES=
+-- CMAKE_CUDA_IMPLICIT_LINK_DIRECTORIES=
+-- CMAKE_CUDA_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES=
+-- CMAKE_CUDA_IMPLICIT_LINK_LIBRARIES=
+-- CMAKE_CUDA_IMPLICIT_LINK_LIBRARIES_EXCLUDE=cudart;cudart.lib;cudart_static;cudart_static.lib;cudadevrt;cudadevrt.lib;rt;pthread;dl
+-- CMAKE_CUDA_INFORMATION_LOADED=1
+-- CMAKE_CUDA_LIBRARY_ARCHITECTURE=
+-- CMAKE_CUDA_LINKER_PREFERENCE=15
+-- CMAKE_CUDA_LINKER_PREFERENCE_PROPAGATES=1
+-- CMAKE_CUDA_LINKER_SUPPORTS_PDB=ON
+-- CMAKE_CUDA_LINK_EXECUTABLE=<CMAKE_COMMAND> -E vs_link_exe --intdir=<OBJECT_DIR> --rc=<CMAKE_RC_COMPILER> --mt=<CMAKE_MT> --manifests <MANIFESTS> -- <CMAKE_LINKER> /nologo <OBJECTS>  /out:<TARGET> /implib:<TARGET_IMPLIB> /pdb:<TARGET_PDB> /version:<TARGET_VERSION_MAJOR>.<TARGET_VERSION_MINOR> <LINK_FLAGS> <LINK_LIBRARIES>
+-- CMAKE_CUDA_OUTPUT_EXTENSION=.obj
+-- CMAKE_CUDA_PLATFORM_ID=Windows
+-- CMAKE_CUDA_RESPONSE_FILE_DEVICE_LINK_FLAG=--options-file
+-- CMAKE_CUDA_RESPONSE_FILE_FLAG=--options-file
+-- CMAKE_CUDA_RUNTIME_LIBRARY_DEFAULT=STATIC
+-- CMAKE_CUDA_RUNTIME_LIBRARY_LINK_OPTIONS_NONE=
+-- CMAKE_CUDA_RUNTIME_LIBRARY_LINK_OPTIONS_SHARED=cudadevrt;cudart
+-- CMAKE_CUDA_RUNTIME_LIBRARY_LINK_OPTIONS_STATIC=cudadevrt;cudart_static
+-- CMAKE_CUDA_SIMULATE_ID=MSVC
+-- CMAKE_CUDA_SIMULATE_VERSION=19.32
+-- CMAKE_CUDA_SIZEOF_DATA_PTR=8
+-- CMAKE_CUDA_SOURCE_FILE_EXTENSIONS=cu
+-- CMAKE_CUDA_STANDARD=20
+-- CMAKE_CUDA_STANDARD_COMPUTED_DEFAULT=03
+-- CMAKE_CUDA_STANDARD_DEFAULT=03
+-- CMAKE_CUDA_STANDARD_LIBRARIES=kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+-- CMAKE_CUDA_STANDARD_LIBRARIES_INIT=kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+-- CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/include
+-- CMAKE_CUDA_USE_RESPONSE_FILE_FOR_INCLUDES=0
+-- CMAKE_CUDA_USE_RESPONSE_FILE_FOR_LIBRARIES=0
+-- CMAKE_CUDA_USE_RESPONSE_FILE_FOR_OBJECTS=0
+-- CMAKE_CUDA_VERBOSE_COMPILE_FLAG=-Xcompiler=-v
+-- CMAKE_CUDA_VERBOSE_FLAG=-v
+-- CMAKE_CUDA_XCODE_ARCHS=
+-- CMAKE_DEPFILE_FLAGS_CUDA=-MD -MT <DEP_TARGET> -MF <DEP_FILE>
+-- CMAKE_INCLUDE_FLAG_CUDA=-I
+-- CMAKE_INCLUDE_SYSTEM_FLAG_CUDA=-isystem=
+-- CMAKE_SHARED_LIBRARY_CREATE_CUDA_FLAGS=-shared
+-- CMAKE_SHARED_MODULE_CREATE_CUDA_FLAGS=-shared
+-- CMAKE_VS_PLATFORM_TOOLSET_CUDA=11.6
+-- CUDATOOLKIT_FOUND=TRUE
+-- CUDAToolkit_BIN_DIR=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/bin
+-- CUDAToolkit_CUPTI_INCLUDE_DIR=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/extras/CUPTI/include
+-- CUDAToolkit_FOUND=TRUE
+-- CUDAToolkit_INCLUDE_DIR=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/include
+-- CUDAToolkit_INCLUDE_DIRS=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/include
+-- CUDAToolkit_LIBRARY_DIR=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64
+-- CUDAToolkit_NVCC_EXECUTABLE=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/bin/nvcc.exe
+-- CUDAToolkit_TARGET_DIR=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6
+-- CUDAToolkit_VERSION=11.6.124
+-- CUDAToolkit_VERSION_MAJOR=11
+-- CUDAToolkit_VERSION_MINOR=6
+-- CUDAToolkit_VERSION_PATCH=124
+-- CUDA_CUDART=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/cudart.lib
+-- CUDA_OpenCL_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/OpenCL.lib
+-- CUDA_cublasLt_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/cublasLt.lib
+-- CUDA_cublasLt_static_LIBRARY=CUDA_cublasLt_static_LIBRARY-NOTFOUND
+-- CUDA_cublas_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/cublas.lib
+-- CUDA_cublas_static_LIBRARY=CUDA_cublas_static_LIBRARY-NOTFOUND
+-- CUDA_cuda_driver_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/cuda.lib
+-- CUDA_cudart_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/cudart.lib
+-- CUDA_cudart_static_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/cudart_static.lib
+-- CUDA_cufft_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/cufft.lib
+-- CUDA_cufft_static_LIBRARY=CUDA_cufft_static_LIBRARY-NOTFOUND
+-- CUDA_cufft_static_nocallback_LIBRARY=CUDA_cufft_static_nocallback_LIBRARY-NOTFOUND
+-- CUDA_cufftw_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/cufftw.lib
+-- CUDA_cufftw_static_LIBRARY=CUDA_cufftw_static_LIBRARY-NOTFOUND
+-- CUDA_culibos_LIBRARY=CUDA_culibos_LIBRARY-NOTFOUND
+-- CUDA_cupti_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/extras/CUPTI/lib64/cupti.lib
+-- CUDA_cupti_static_LIBRARY=CUDA_cupti_static_LIBRARY-NOTFOUND
+-- CUDA_curand_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/curand.lib
+-- CUDA_curand_static_LIBRARY=CUDA_curand_static_LIBRARY-NOTFOUND
+-- CUDA_cusolver_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/cusolver.lib
+-- CUDA_cusolver_lapack_static_LIBRARY=CUDA_cusolver_lapack_static_LIBRARY-NOTFOUND
+-- CUDA_cusolver_metis_static_LIBRARY=CUDA_cusolver_metis_static_LIBRARY-NOTFOUND
+-- CUDA_cusolver_static_LIBRARY=CUDA_cusolver_static_LIBRARY-NOTFOUND
+-- CUDA_cusparse_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/cusparse.lib
+-- CUDA_cusparse_static_LIBRARY=CUDA_cusparse_static_LIBRARY-NOTFOUND
+-- CUDA_nppc_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/nppc.lib
+-- CUDA_nppc_static_LIBRARY=CUDA_nppc_static_LIBRARY-NOTFOUND
+-- CUDA_nppial_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/nppial.lib
+-- CUDA_nppial_static_LIBRARY=CUDA_nppial_static_LIBRARY-NOTFOUND
+-- CUDA_nppicc_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/nppicc.lib
+-- CUDA_nppicc_static_LIBRARY=CUDA_nppicc_static_LIBRARY-NOTFOUND
+-- CUDA_nppicom_LIBRARY=CUDA_nppicom_LIBRARY-NOTFOUND
+-- CUDA_nppicom_static_LIBRARY=CUDA_nppicom_static_LIBRARY-NOTFOUND
+-- CUDA_nppidei_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/nppidei.lib
+-- CUDA_nppidei_static_LIBRARY=CUDA_nppidei_static_LIBRARY-NOTFOUND
+-- CUDA_nppif_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/nppif.lib
+-- CUDA_nppif_static_LIBRARY=CUDA_nppif_static_LIBRARY-NOTFOUND
+-- CUDA_nppig_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/nppig.lib
+-- CUDA_nppig_static_LIBRARY=CUDA_nppig_static_LIBRARY-NOTFOUND
+-- CUDA_nppim_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/nppim.lib
+-- CUDA_nppim_static_LIBRARY=CUDA_nppim_static_LIBRARY-NOTFOUND
+-- CUDA_nppist_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/nppist.lib
+-- CUDA_nppist_static_LIBRARY=CUDA_nppist_static_LIBRARY-NOTFOUND
+-- CUDA_nppisu_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/nppisu.lib
+-- CUDA_nppisu_static_LIBRARY=CUDA_nppisu_static_LIBRARY-NOTFOUND
+-- CUDA_nppitc_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/nppitc.lib
+-- CUDA_nppitc_static_LIBRARY=CUDA_nppitc_static_LIBRARY-NOTFOUND
+-- CUDA_npps_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/npps.lib
+-- CUDA_npps_static_LIBRARY=CUDA_npps_static_LIBRARY-NOTFOUND
+-- CUDA_nvToolsExt_LIBRARY=C:/Program Files/NVIDIA Corporation/NvToolsExt/lib/x64/nvToolsExt64_1.lib
+-- CUDA_nvgraph_LIBRARY=CUDA_nvgraph_LIBRARY-NOTFOUND
+-- CUDA_nvgraph_static_LIBRARY=CUDA_nvgraph_static_LIBRARY-NOTFOUND
+-- CUDA_nvjpeg_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/nvjpeg.lib
+-- CUDA_nvjpeg_static_LIBRARY=CUDA_nvjpeg_static_LIBRARY-NOTFOUND
+-- CUDA_nvml_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/nvml.lib
+-- CUDA_nvrtc_LIBRARY=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/nvrtc.lib
+-- FIND_PACKAGE_MESSAGE_DETAILS_CUDAToolkit=[C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/include][C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/lib/x64/cudart.lib][C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/bin][v11.6.124()]
+-- MSVC_CUDA_ARCHITECTURE_ID=x64
+-- SET_MSVC_CUDA_ARCHITECTURE_ID=set(MSVC_CUDA_ARCHITECTURE_ID x64)
+-- _CMAKE_COMPILE_AS_CUDA_FLAG=-x cu
+-- _CMAKE_CUDA_EXTRA_DEVICE_LINK_FLAGS=-Wno-deprecated-gpu-targets
+-- _CMAKE_CUDA_EXTRA_FLAGS=-forward-unknown-to-host-compiler
+-- _CMAKE_CUDA_PTX_FLAG=-ptx
+-- _CMAKE_CUDA_RDC_FLAG=-rdc=true
+-- _CMAKE_CUDA_WHOLE_FLAG=-c
+-- _CUDA_CMP0104=NEW
+-- _PLATFORM_DEFINES_CUDA=-DWIN32
+-- _SET_CMAKE_CUDA_COMPILER_SYSROOT=
+-- _SET_CMAKE_CUDA_RUNTIME_LIBRARY_DEFAULT=set(CMAKE_CUDA_RUNTIME_LIBRARY_DEFAULT "STATIC")
+-- CMAKE_CUDA_HOST_COMPILER=
+-- CMAKE_CUDA_COMPILER_ID=NVIDIA
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/work/modern_cmake_work/ModernCMake/codes/cmake/cuda/variable/05/build

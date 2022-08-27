@@ -1,0 +1,14 @@
+PS D:\work\modern_cmake_work\ModernCMake\codes\cmake\cuda\print_properties\02\build> cmake ..
+-- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.22000.
+-- CMAKE_CUDA_KNOWN_FEATURES=cuda_std_03;cuda_std_11;cuda_std_14;cuda_std_17;cuda_std_20;cuda_std_23
+-- CUDA_ARCHITECTURES=
+-- CUDA_EXTENSIONS=
+-- CUDA_PTX_COMPILATION=
+-- CUDA_RESOLVE_DEVICE_SYMBOLS=
+-- CUDA_RUNTIME_LIBRARY=
+-- CUDA_SEPARABLE_COMPILATION=
+-- CUDA_STANDARD=
+-- CUDA_STANDARD_REQUIRED=
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/work/modern_cmake_work/ModernCMake/codes/cmake/cuda/print_properties/02/build
