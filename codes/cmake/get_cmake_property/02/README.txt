@@ -1,0 +1,1 @@
+cmake .. | tee testprj.log
