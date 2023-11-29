@@ -1,0 +1,45 @@
+cmake_minimum_required ( VERSION 3.28 )
+
+project ( testprj LANGUAGES Fortran )
+
+message ( STATUS "CMAKE_VERSION = ${CMAKE_VERSION}" )
+message ( STATUS "CMAKE_GENERATOR = ${CMAKE_GENERATOR}" )
+message ( STATUS "CMAKE_SYSTEM_AND_RC_COMPILER_INFO_FILE = ${CMAKE_SYSTEM_AND_RC_COMPILER_INFO_FILE}" )
+message ( STATUS "CMAKE_RC_COMPILER = ${CMAKE_RC_COMPILER}" )
+message ( STATUS "CMAKE_SYSTEM_NAME = ${CMAKE_SYSTEM_NAME}" )
+message ( STATUS "__INTEL_LLVM_COMPILER = ${__INTEL_LLVM_COMPILER}" )
+message ( STATUS "CMAKE_SYSTEM = ${CMAKE_SYSTEM}" )
+message ( STATUS "CMAKE_SYSTEM_NAME = ${CMAKE_SYSTEM_NAME}" )
+message ( STATUS "CMAKE_Fortran_COMPILER_ID_TOOL = ${CMAKE_Fortran_COMPILER_ID_TOOL}" )
+
+set ( lang Fortran )
+
+message ( STATUS "CMAKE_${lang}_COMPILER_ID = ${CMAKE_${lang}_COMPILER_ID}" )
+message ( STATUS "CMAKE_${lang}_PLATFORM_ID = ${CMAKE_${lang}_PLATFORM_ID}" )
+message ( STATUS "CMAKE_${lang}_COMPILER_ARCHITECTURE_ID = ${CMAKE_${lang}_COMPILER_ARCHITECTURE_ID}" )
+message ( STATUS "MSVC_${lang}_ARCHITECTURE_ID = ${MSVC_${lang}_ARCHITECTURE_ID}" )
+message ( STATUS "CMAKE_${lang}_XCODE_ARCHS = ${CMAKE_${lang}_XCODE_ARCHS}" )
+message ( STATUS "CMAKE_${lang}_CL_SHOWINCLUDES_PREFIX = ${CMAKE_${lang}_CL_SHOWINCLUDES_PREFIX}" )
+message ( STATUS "CMAKE_${lang}_COMPILER_FRONTEND_VARIANT = ${CMAKE_${lang}_COMPILER_FRONTEND_VARIANT}" )
+message ( STATUS "CMAKE_${lang}_COMPILER_VERSION = ${CMAKE_${lang}_COMPILER_VERSION}" )
+message ( STATUS "CMAKE_${lang}_COMPILER_VERSION_INTERNAL = ${CMAKE_${lang}_COMPILER_VERSION_INTERNAL}" )
+message ( STATUS "CMAKE_${lang}_COMPILER_WRAPPER = ${CMAKE_${lang}_COMPILER_WRAPPER}" )
+message ( STATUS "CMAKE_${lang}_SIMULATE_ID = ${CMAKE_${lang}_SIMULATE_ID}" )
+message ( STATUS "CMAKE_${lang}_SIMULATE_VERSION = ${CMAKE_${lang}_SIMULATE_VERSION}" )
+message ( STATUS "CMAKE_${lang}_STANDARD_COMPUTED_DEFAULT = ${CMAKE_${lang}_STANDARD_COMPUTED_DEFAULT}" )
+message ( STATUS "CMAKE_${lang}_EXTENSIONS_COMPUTED_DEFAULT = ${CMAKE_${lang}_EXTENSIONS_COMPUTED_DEFAULT}" )
+message ( STATUS "CMAKE_${lang}_COMPILER_PRODUCED_OUTPUT = ${CMAKE_${lang}_COMPILER_PRODUCED_OUTPUT}" )
+message ( STATUS "CMAKE_${lang}_COMPILER_PRODUCED_FILES = ${CMAKE_${lang}_COMPILER_PRODUCED_FILES}" )
+
+
+#include(Platform/${CMAKE_SYSTEM_NAME}-Determine-Fortran OPTIONAL)
+#include(Platform/${CMAKE_SYSTEM_NAME}-Fortran OPTIONAL)
+#include(Platform/Windows-Determine-Fortran OPTIONAL)
+#include(Platform/Windows-Fortran OPTIONAL)
+
+
+if(${CMAKE_GENERATOR} MATCHES "Visual Studio")
+    message ( STATUS "Is Visual Studio" )
+else()
+    message ( STATUS "Not Visual Studio" )
+endif()

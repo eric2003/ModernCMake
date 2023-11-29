@@ -1,0 +1,3 @@
+-- CMAKE_COMMAND = C:/Program Files/CMake/bin/cmake.exe
+-- CMAKE_ROOT = C:/Program Files/CMake/share/cmake-3.28
+-- CMAKE_PLATFORM_INFO_DIR = D:/work/modern_cmake_work/ModernCMake/codes/cmake/CMAKE_PLATFORM_INFO_DIR/01/build/CMakeFiles/3.28.0-rc4

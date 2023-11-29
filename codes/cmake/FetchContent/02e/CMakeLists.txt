@@ -1,0 +1,27 @@
+cmake_minimum_required ( VERSION 3.28 )
+
+project ( testprj )
+
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+)
+
+FetchContent_MakeAvailable(googletest)
+
+FetchContent_GetProperties(googletest)
+
+message( STATUS "googletest_POPULATED = ${googletest_POPULATED}" )
+message( STATUS "googletest_SOURCE_DIR = ${googletest_SOURCE_DIR}" )
+message( STATUS "googletest_BINARY_DIR = ${googletest_BINARY_DIR}" )
+message( STATUS "FETCHCONTENT_BASE_DIR = ${FETCHCONTENT_BASE_DIR}" )
+message( STATUS "FETCHCONTENT_QUIET = ${FETCHCONTENT_QUIET}" )
+message( STATUS "FETCHCONTENT_FULLY_DISCONNECTED = ${FETCHCONTENT_FULLY_DISCONNECTED}" )
+message( STATUS "FETCHCONTENT_UPDATES_DISCONNECTED = ${FETCHCONTENT_UPDATES_DISCONNECTED}" )
+message( STATUS "FETCHCONTENT_TRY_FIND_PACKAGE_MODE = ${FETCHCONTENT_TRY_FIND_PACKAGE_MODE}" )
+message( STATUS "FETCHCONTENT_SOURCE_DIR_GOOGLETEST = ${FETCHCONTENT_SOURCE_DIR_GOOGLETEST}" )
+message( STATUS "FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLETEST = ${FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLETEST}" )
+message( STATUS "CMAKE_FIND_PACKAGE_REDIRECTS_DIR = ${CMAKE_FIND_PACKAGE_REDIRECTS_DIR}" )
+
+
